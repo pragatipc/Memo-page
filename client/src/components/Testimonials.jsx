@@ -1,9 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isClient, setIsClient] = useState(false)
 
   const testimonials = [
     {
@@ -32,6 +33,16 @@ const Testimonials = () => {
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+  }
+
+  // Set the client flag after mount to ensure it's client-side
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // Avoid rendering anything until the component is mounted on the client side
+  if (!isClient) {
+    return null
   }
 
   return (

@@ -1,3 +1,22 @@
+:root {
+  --background: #ffffff;
+  --text: #111827;
+  --text-light: #6b7280;
+  --primary: #4f46e5;
+  --border: #e5e7eb;
+  --background-alt: #f9fafb;
+}
+
+.dark {
+  --background: #1f2937;
+  --text: #f9fafb;
+  --text-light: #9ca3af;
+  --primary: #6366f1;
+  --border: #374151;
+  --background-alt: #111827;
+}
+
+
 /* Header Styles */
 .header {
   position: fixed;
@@ -592,7 +611,7 @@
 /* CTA Section */
 .cta-tabs {
   display: flex;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
   margin-bottom: 2rem;
 }
 

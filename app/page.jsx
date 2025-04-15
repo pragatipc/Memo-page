@@ -11,7 +11,7 @@ import Traction from "@/components/traction"
 import Testimonials from "@/components/testimonials"
 import CTA from "@/components/cta"
 import Footer from "@/components/footer"
-import { ModeToggle } from "@/components/mode-toggle"
+import ModeToggle from "@/components/mode-toggle"
 
 export default function Home() {
   const controls = useAnimation()
